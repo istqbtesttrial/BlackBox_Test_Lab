@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partitions d'Équivalence | Belhaj Ouajdi</title>
+
+    <!-- Google Fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- AOS CSS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        html, body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #06b6d4 0%, #fde047 100%);
+        }
+        .nav-link:hover {
+            color: #9333EA;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800 flex flex-col">
+
+<header class="bg-white shadow py-4">
+    <nav class="container mx-auto px-4 flex justify-between items-center">
+        <div class="text-xl font-bold text-gray-700 flex items-center space-x-2">
+            <i class="fas fa-th-large"></i> <span>Partitions d'Équivalence</span>
+        </div>
+        <div>
+            <a href="#" class="nav-link text-gray-600 hover:underline">Accueil</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container mx-auto px-4 py-12 flex-grow">
+
+    <section class="bg-white rounded shadow p-6 mb-8" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Exercice 1 : Âge pour voter</h2>
+        <p class="mb-4">Un système électoral accepte uniquement les personnes âgées entre 18 et 100 ans inclus. Quelle valeur représente une partition invalide ?</p>
+        <ul class="text-gray-700">
+            <li><input type="radio" name="q1" value="correct"> 17 ans</li>
+            <li><input type="radio" name="q1" value="wrong"> 18 ans</li>
+            <li><input type="radio" name="q1" value="wrong"> 50 ans</li>
+            <li><input type="radio" name="q1" value="wrong"> 30 ans</li>
+        </ul>
+    </section>
+
+    <section class="bg-white rounded shadow p-6 mb-8" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Exercice 2 : Formulaire Mot de Passe</h2>
+        <p class="mb-4">Un mot de passe doit contenir entre 6 et 12 caractères. Quelle option représente une partition valide ?</p>
+        <ul class="text-gray-700">
+            <li><input type="radio" name="q2" value="wrong"> abc (3 caractères)</li>
+            <li><input type="radio" name="q2" value="correct"> abcdef (6 caractères)</li>
+            <li><input type="radio" name="q2" value="wrong"> abcdefghijklm (13 caractères)</li>
+            <li><input type="radio" name="q2" value="wrong"> abcd (4 caractères)</li>
+        </ul>
+    </section>
+
+    <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Exercice 3 : Nombre d'articles</h2>
+        <p class="mb-4">Une boutique accepte entre 1 et 20 articles par commande. Quel cas représente une partition invalide ?</p>
+        <ul class="text-gray-700">
+            <li><input type="radio" name="q3" value="correct"> 0 article</li>
+            <li><input type="radio" name="q3" value="wrong"> 10 articles</li>
+            <li><input type="radio" name="q3" value="wrong"> 15 articles</li>
+            <li><input type="radio" name="q3" value="wrong"> 1 article</li>
+        </ul>
+    </section>
+
+    <button id="validate" class="mt-8 bg-gray-700 text-white px-6 py-3 rounded shadow hover:bg-gray-800 transition">Valider</button>
+    <div id="result" class="mt-4 font-bold"></div>
+
+</main>
+
+<footer class="text-center py-4 bg-white shadow">
+    ©2025 - Belhaj Ouajdi | Tous droits réservés
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({duration: 1000});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

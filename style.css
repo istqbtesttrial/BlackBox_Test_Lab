@@ -1,0 +1,80 @@
+/* Global style */
+html, body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Hero Background Gradient */
+.hero-bg {
+    background: linear-gradient(135deg, #06b6d4 0%, #fde047 100%);
+}
+
+/* Navigation Links Hover Effect */
+.nav-link:hover {
+    color: #9333EA;
+}
+
+/* Input Radio Button Styles */
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: #9333EA;
+}
+
+/* List styling for QCM choices */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Button validation style */
+#validate {
+    background-color: #9333EA;
+}
+
+#validate:hover {
+    background-color: #7e22ce;
+}
+
+/* Result Display */
+#result {
+    color: #4b5563; /* Gray-700 from Tailwind */
+    font-size: 1.2rem;
+}
+
+/* Footer styling */
+footer {
+    font-size: 0.9rem;
+    color: #6b7280; /* Gray-500 from Tailwind */
+}
+
+/* Custom card style for exercices (if additional customization needed) */
+section {
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-bg {
+        padding: 2rem 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
