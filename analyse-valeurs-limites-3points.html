@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse des Valeurs Limites (3 Points) | Belhaj Ouajdi</title>
+
+    <!-- Google Fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- AOS CSS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        html, body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #06b6d4 0%, #fde047 100%);
+        }
+        .nav-link:hover {
+            color: #9333EA;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800 flex flex-col">
+
+<header class="bg-white shadow py-4">
+    <nav class="container mx-auto px-4 flex justify-between items-center">
+        <div class="text-xl font-bold text-gray-700 flex items-center space-x-2">
+            <i class="fas fa-ruler-combined"></i> <span>Valeurs Limites (3 Points)</span>
+        </div>
+        <div>
+            <a href="index.html" class="nav-link text-gray-600 hover:underline">Accueil</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero-bg py-16 px-4 flex items-center justify-center">
+    <div class="container mx-auto text-center text-white" data-aos="zoom-in">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Analyse des Valeurs Limites (BVA)</h1>
+        <p class="text-lg md:text-2xl font-light">
+            Identifier précisément les frontières pour optimiser les tests.
+        </p>
+    </div>
+</section>
+
+<main class="container mx-auto px-4 py-12 flex-grow">
+
+    <section class="bg-white rounded shadow p-6 mb-8" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Qu’est-ce que l'analyse des valeurs limites à 3 points ?</h2>
+        <p class="text-gray-700 leading-relaxed">
+            L'<strong>Analyse des Valeurs Limites (BVA - Boundary Value Analysis)</strong> est une technique qui consiste à tester spécifiquement les limites des partitions.
+            La méthode à <strong>3 points</strong> consiste à tester exactement la valeur limite, ainsi que les valeurs immédiatement inférieure et supérieure à cette limite.
+        </p>
+    </section>
+
+    <!-- Placeholder pour les 10 exercices à intégrer -->
+    <div class="space-y-8">
+        <!-- Exercice 1 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 1 : Limite de vitesse routière</h2>
+            <p>Un radar déclenche une amende à plus de 110 km/h. Quelles valeurs limites choisir pour un test BVA à trois points ?</p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q11" value="correct"> A. 109, 110, 111</li>
+                <li><input type="radio" name="q11" value="wrong"> B. 110, 111, 112</li>
+                <li><input type="radio" name="q11" value="wrong"> C. 108, 110, 112</li>
+                <li><input type="radio" name="q11" value="wrong"> D. 109, 111, 112</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 2 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 2 : Quantité minimale d'achat</h2>
+            <p>Quels cas détecteraient l'erreur (total > 50 au lieu de total >= 50) ?</p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q12" value="correct"> A. 49, 50, 51</li>
+                <li><input type="radio" name="q12" value="wrong"> B. 50, 51, 52</li>
+                <li><input type="radio" name="q12" value="wrong"> C. 48, 50, 52</li>
+                <li><input type="radio" name="q12" value="wrong"> D. Aucun cas</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 3 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 3 : Âge d'inscription compétition</h2>
+            <p>Quels cas de test BVA sont adaptés (18-30 ans inclus) ?</p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q13" value="correct"> A. 17, 18, 30, 31</li>
+                <li><input type="radio" name="q13" value="wrong"> B. 18, 19, 29, 30</li>
+                <li><input type="radio" name="q13" value="wrong"> C. 16, 18, 30, 32</li>
+                <li><input type="radio" name="q13" value="wrong"> D. 17, 19, 29, 31</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 4 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 4 : Température fonctionnement appareil</h2>
+            <p>Quelles valeurs limites choisir (arrêt >40°C) ?</p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q14" value="correct"> A. 39, 40, 41</li>
+                <li><input type="radio" name="q14" value="wrong"> B. 38, 40, 42</li>
+                <li><input type="radio" name="q14" value="wrong"> C. 40, 41, 42</li>
+                <li><input type="radio" name="q14" value="wrong"> D. 39, 41, 42</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 5 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 5 : Longueur mot de passe</h2>
+            <p>Quels cas de test BVA choisir (8-16 caractères) ?</p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q15" value="correct"> A. 7, 8, 16, 17</li>
+                <li><input type="radio" name="q15" value="wrong"> B. 8, 9, 15, 16</li>
+                <li><input type="radio" name="q15" value="wrong"> C. 6, 8, 16, 18</li>
+                <li><input type="radio" name="q15" value="wrong"> D. 7, 9, 15, 17</li>
+            </ul>
+        </section>
+        <h2 class="font-bold text-xl text-gray-700">Exercice 6 : Seuil de réduction commerciale</h2>
+        <p>Quelles valeurs limites choisir pour appliquer une réduction strictement supérieure à 100 DT ?</p>
+        <ul class="mt-2">
+            <li><input type="radio" name="q16" value="correct"> A. 99, 100, 101</li>
+            <li><input type="radio" name="q16" value="wrong"> B. 98, 100, 102</li>
+            <li><input type="radio" name="q16" value="wrong"> C. 100, 101, 102</li>
+            <li><input type="radio" name="q16" value="wrong"> D. 99, 101, 102</li>
+        </ul>
+        <h2 class="font-bold text-xl text-gray-700">Exercice 7 : Niveau sonore acceptable</h2>
+        <p>Quelles valeurs limites choisir pour tester un niveau sonore acceptable strictement inférieur ou égal à 70 dB ?</p>
+        <ul class="mt-2">
+            <li><input type="radio" name="q17" value="correct"> A. 69, 70, 71</li>
+            <li><input type="radio" name="q17" value="wrong"> B. 68, 70, 72</li>
+            <li><input type="radio" name="q17" value="wrong"> C. 70, 71, 72</li>
+            <li><input type="radio" name="q17" value="wrong"> D. 69, 71, 72</li>
+        </ul>
+        <h2 class="font-bold text-xl text-gray-700">Exercice 8 : Stock minimum d'un produit</h2>
+        <p>Quels cas détecteraient l'erreur (stock < 10 au lieu de stock <= 10) ?</p>
+        <ul class="mt-2">
+            <li><input type="radio" name="q18" value="correct"> A. 9, 10, 11</li>
+            <li><input type="radio" name="q18" value="wrong"> B. 8, 10, 12</li>
+            <li><input type="radio" name="q18" value="wrong"> C. 10, 11, 12</li>
+            <li><input type="radio" name="q18" value="wrong"> D. Aucun cas</li>
+        </ul>
+        <h2 class="font-bold text-xl text-gray-700">Exercice 9 : Poids maximum d'un colis</h2>
+        <p>Quels cas de test BVA sont corrects pour un colis entre 1 kg et 25 kg inclus ?</p>
+        <ul class="mt-2">
+            <li><input type="radio" name="q19" value="correct"> A. 0, 1, 25, 26</li>
+            <li><input type="radio" name="q19" value="wrong"> B. 1, 2, 24, 25</li>
+            <li><input type="radio" name="q19" value="wrong"> C. 0, 2, 24, 26</li>
+            <li><input type="radio" name="q19" value="wrong"> D. 1, 13, 25</li>
+        </ul>
+        <h2 class="font-bold text-xl text-gray-700">Exercice 10 : Volume autorisé d’un réservoir</h2>
+        <p>Quels cas de test choisir pour un volume maximal strictement inférieur à 500 litres ?</p>
+        <ul class="mt-2">
+            <li><input type="radio" name="q20" value="correct"> A. 499, 500, 501</li>
+            <li><input type="radio" name="q20" value="wrong"> B. 498, 500, 502</li>
+            <li><input type="radio" name="q20" value="wrong"> C. 500, 501, 502</li>
+            <li><input type="radio" name="q20" value="wrong"> D. 499, 501, 502</li>
+        </ul>
+
+    </div>
+
+    <button id="validate" class="mt-8 bg-gray-700 text-white px-6 py-3 rounded shadow hover:bg-gray-800 transition">Valider</button>
+    <div id="result" class="mt-4 font-bold animate__animated"></div>
+
+</main>
+
+<footer class="text-center py-4 bg-white shadow">
+    ©2025 - Belhaj Ouajdi | Tous droits réservés
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({duration: 1000});
+</script>
+<script src="script-bva.js"></script>
+
+</body>
+</html>
