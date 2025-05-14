@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse des Valeurs Limites (2 Points) | Belhaj Ouajdi</title>
+
+    <!-- Google Fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- AOS CSS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        html, body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #06b6d4 0%, #fde047 100%);
+        }
+        .nav-link:hover {
+            color: #9333EA;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800 flex flex-col">
+
+<header class="bg-white shadow py-4">
+    <nav class="container mx-auto px-4 flex justify-between items-center">
+        <div class="text-xl font-bold text-gray-700 flex items-center space-x-2">
+            <i class="fas fa-ruler"></i> <span>Valeurs Limites (2 Points)</span>
+        </div>
+        <div class="space-x-4">
+            <a href="index.html" class="nav-link text-gray-600 hover:underline">Accueil</a>
+            <a href="analyse-valeurs-limites-3points.html" class="nav-link text-gray-600 hover:underline">Valeurs Limites (3 points)</a>
+            <a href="partitions-equivalence.html" class="nav-link text-gray-600 hover:underline">Partitions d'Équivalence</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero-bg py-16 px-4 flex items-center justify-center">
+    <div class="container mx-auto text-center text-white" data-aos="zoom-in">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Analyse des Valeurs Limites (2 Points)</h1>
+        <p class="text-lg md:text-2xl font-light">
+            Optimisez vos cas de test en ciblant précisément les limites.
+        </p>
+    </div>
+</section>
+
+<main class="container mx-auto px-4 py-12 flex-grow">
+
+    <section class="bg-white rounded shadow p-6 mb-8" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-gray-700 mb-4">Qu’est-ce que l'analyse des valeurs limites à 2 points ?</h2>
+        <p class="text-gray-700 leading-relaxed">
+            L'<strong>Analyse des Valeurs Limites (BVA)</strong> à 2 points consiste à tester uniquement les valeurs directement sur chaque limite définissant les partitions, optimisant ainsi la couverture avec le minimum de tests.
+        </p>
+    </section>
+
+    <!-- Placeholder pour les 10 exercices à intégrer -->
+    <div class="space-y-8">
+        <!-- Exercice 1 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 1 : Régulateur de vitesse</h2>
+            <p>
+                Vous testez un régulateur de vitesse automatique d'une voiture ayant les spécifications suivantes :<br>
+                • En dessous de 30 km/h, le régulateur ne peut pas être activé.<br>
+                • Entre 30 km/h et 120 km/h inclus, le régulateur fonctionne normalement.<br>
+                • Au-dessus de 120 km/h, le régulateur émet une alerte de vitesse excessive.<br><br>
+                Quelle liste minimale de valeurs devez-vous utiliser pour obtenir une couverture de 100 % avec l'analyse des valeurs limites à deux valeurs ?
+            </p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q21" value="wrong"> 30, 120</li>
+                <li><input type="radio" name="q21" value="correct"> 29, 30, 120, 121</li>
+                <li><input type="radio" name="q21" value="wrong"> 25, 60, 125</li>
+                <li><input type="radio" name="q21" value="wrong"> 29, 31, 119, 121</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 2 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 2 : Application bancaire</h2>
+            <p>
+                Vous testez une application bancaire permettant de transférer un montant compris entre 50€ et 1000€ inclus par opération. Toute opération inférieure à 50€ ou supérieure à 1000€ est refusée.<br><br>
+                Quel ensemble de valeurs vous permet d'obtenir une couverture optimale à deux valeurs (2VBVA) ?
+            </p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q22" value="correct"> 49, 50, 1000, 1001</li>
+                <li><input type="radio" name="q22" value="wrong"> 50, 500, 1000</li>
+                <li><input type="radio" name="q22" value="wrong"> 48, 51, 999, 1002</li>
+                <li><input type="radio" name="q22" value="wrong"> 0, 49, 50, 1000</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 3 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 3 : Inscription en ligne</h2>
+            <p>
+                Vous testez un formulaire d'inscription qui impose une limite d’âge entre 18 et 65 ans inclus pour pouvoir s’inscrire à une activité sportive.<br><br>
+                Quelle combinaison de valeurs est la plus appropriée pour couvrir entièrement les limites avec la technique d'analyse des valeurs limites à deux valeurs (2VBVA) ?
+            </p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q23" value="wrong"> 18, 65</li>
+                <li><input type="radio" name="q23" value="correct"> 17, 18, 65, 66</li>
+                <li><input type="radio" name="q23" value="wrong"> 16, 19, 64, 67</li>
+                <li><input type="radio" name="q23" value="wrong"> 15, 18, 65, 70</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 4 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 4 : Système de gestion des stocks</h2>
+            <p>
+                Vous testez un système de gestion des stocks qui affiche un avertissement si la quantité d'un produit descend sous les 5 unités, et empêche toute commande lorsque la quantité atteint 0.<br><br>
+                Quelles valeurs de quantités utilisez-vous pour une couverture optimale à deux valeurs (2VBVA) ?
+            </p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q24" value="correct"> 0, 1, 4, 5</li>
+                <li><input type="radio" name="q24" value="wrong"> 1, 5</li>
+                <li><input type="radio" name="q24" value="wrong"> 0, 5, 6</li>
+                <li><input type="radio" name="q24" value="wrong"> 2, 4, 5</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 5 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 5 : Validation d'un mot de passe</h2>
+            <p>
+                Vous testez une application où le mot de passe doit comporter obligatoirement entre 8 et 16 caractères inclus. Tout autre nombre de caractères entraîne le rejet du mot de passe.<br><br>
+                Quel ensemble de longueurs vous permet d'obtenir une couverture complète des limites avec la technique d'analyse des valeurs limites à deux valeurs (2VBVA) ?
+            </p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q25" value="correct"> 7, 8, 16, 17</li>
+                <li><input type="radio" name="q25" value="wrong"> 8, 16</li>
+                <li><input type="radio" name="q25" value="wrong"> 6, 9, 15, 18</li>
+                <li><input type="radio" name="q25" value="wrong"> 1, 8, 16, 20</li>
+            </ul>
+        </section>
+        <!-- Exercice 6 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 6 : Limite de participants à un événement</h2>
+            <p>
+                Vous testez un système de réservation pour un événement où le nombre de participants doit être compris entre 10 et 200 inclus.<br><br>
+                Quelle sélection de valeurs permet une couverture optimale avec l'analyse des valeurs limites à deux valeurs (2VBVA) ?
+            </p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q26" value="correct"> 9, 10, 200, 201</li>
+                <li><input type="radio" name="q26" value="wrong"> 10, 100, 200</li>
+                <li><input type="radio" name="q26" value="wrong"> 8, 11, 199, 202</li>
+                <li><input type="radio" name="q26" value="wrong"> 5, 10, 200, 205</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 7 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 7 : Température d'un aquarium</h2>
+            <p>
+                Vous testez un système d'aquarium automatique qui maintient la température entre 24°C et 28°C inclus. En dehors de cette plage, une alerte est émise.<br><br>
+                Quelles valeurs devez-vous tester pour obtenir une couverture à deux valeurs optimale ?
+            </p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q27" value="wrong"> 24, 28</li>
+                <li><input type="radio" name="q27" value="correct"> 23, 24, 28, 29</li>
+                <li><input type="radio" name="q27" value="wrong"> 22, 25, 27, 30</li>
+                <li><input type="radio" name="q27" value="wrong"> 20, 24, 28, 32</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 8 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 8 : Recharge d'une carte prépayée</h2>
+            <p>
+                Vous testez un système qui permet la recharge d'une carte prépayée avec des montants compris entre 5€ et 100€ inclus.<br><br>
+                Quelle combinaison de montants fournit une couverture optimale à deux valeurs (2VBVA) ?
+            </p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q28" value="correct"> 4, 5, 100, 101</li>
+                <li><input type="radio" name="q28" value="wrong"> 5, 50, 100</li>
+                <li><input type="radio" name="q28" value="wrong"> 3, 6, 99, 102</li>
+                <li><input type="radio" name="q28" value="wrong"> 1, 5, 100, 105</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 9 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 9 : Durée d'un appel téléphonique</h2>
+            <p>
+                Vous testez un système de tarification d'appels où la durée minimum est de 1 minute et la durée maximum est de 120 minutes inclus.<br><br>
+                Quelles valeurs devez-vous choisir pour assurer une couverture optimale des valeurs limites à deux valeurs ?
+            </p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q29" value="correct"> 0, 1, 120, 121</li>
+                <li><input type="radio" name="q29" value="wrong"> 1, 60, 120</li>
+                <li><input type="radio" name="q29" value="wrong"> 0, 2, 119, 122</li>
+                <li><input type="radio" name="q29" value="wrong"> 1, 5, 115, 120</li>
+            </ul>
+        </section>
+
+        <!-- Exercice 10 -->
+        <section class="bg-white rounded shadow p-6" data-aos="fade-up">
+            <h2 class="font-bold text-xl text-gray-700">Exercice 10 : Altitude d'un drone</h2>
+            <p>
+                Vous testez un drone dont l'altitude autorisée est comprise entre 50 mètres et 500 mètres inclus. Toute altitude en dehors de ces valeurs provoque une alerte.<br><br>
+                Quel ensemble d’altitudes testerez-vous pour une couverture complète à deux valeurs (2VBVA) ?
+            </p>
+            <ul class="mt-2">
+                <li><input type="radio" name="q30" value="correct"> 49, 50, 500, 501</li>
+                <li><input type="radio" name="q30" value="wrong"> 50, 250, 500</li>
+                <li><input type="radio" name="q30" value="wrong"> 48, 51, 499, 502</li>
+                <li><input type="radio" name="q30" value="wrong"> 45, 50, 500, 505</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <button id="validate" class="mt-8 bg-gray-700 text-white px-6 py-3 rounded shadow hover:bg-gray-800 transition">Valider</button>
+    <div id="result" class="mt-4 font-bold animate__animated"></div>
+
+</main>
+
+<footer class="text-center py-4 bg-white shadow">
+    ©2025 - Belhaj Ouajdi | Tous droits réservés
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({duration: 1000});
+</script>
+<script src="script-bva-2points.js"></script>
+
+</body>
+</html>
